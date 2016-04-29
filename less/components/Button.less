@@ -59,15 +59,17 @@
 // special case for the default button
 
 .Button--default {
-	#gradient .vertical(#fafafa, #eaeaea);
+	// #gradient .vertical(#fafafa, #eaeaea);
+	#gradient .vertical(@c3, @c4);
 	border: 1px solid @input-border-color;
 	border-color: @input-border-color darken(@input-border-color, 6%) darken(@input-border-color, 12%);
 	color: @text-color;
-	text-shadow: 0 1px 0 white;
+	text-shadow: 0 1px 0 @c5;
 
 
 	&:hover {
-		#gradient .vertical(#fff, #eee);
+		#gradient .vertical(@c3, @c4);
+		// #gradient .vertical(#fff, #eee);
 		border-color: darken(@input-border-color, 5%) darken(@input-border-color, 5%) darken(@input-border-color, 10%);
 		box-shadow: 0 1px 0 rgba(0,0,0,0.1);
 		color: @text-color;
@@ -117,16 +119,16 @@
 // fill styles
 
 .Button--primary {
-	.button-variant(white; @button-primary-bg);
+	.button-variant(@gray-light; @button-primary-bg);
 }
 .Button--success {
-	.button-variant(white; @button-success-bg);
+	.button-variant(@gray-light; @button-success-bg);
 }
 .Button--warning {
-	.button-variant(white; @button-warning-bg);
+	.button-variant(@gray-light; @button-warning-bg);
 }
 .Button--danger {
-	.button-variant(white; @button-danger-bg);
+	.button-variant(@gray-light; @button-danger-bg);
 }
 
 
@@ -186,7 +188,7 @@
 		background-color: @app-danger;
 		border-color: darken(@app-danger, 4%) darken(@app-danger, 8%) darken(@app-danger, 12%);
 		box-shadow: 0 1px 0 rgba(0,0,0,0.1);
-		color: white;
+		color: @gray-light;
 		text-decoration: none;
 	}
 	&:focus {
@@ -198,7 +200,7 @@
 		background-image: none !important;
 		border-color: darken(@app-danger, 12%) darken(@app-danger, 8%) darken(@app-danger, 8%);
 		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-		color: white;
+		color: @gray-light;
 	}
 }
 

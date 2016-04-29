@@ -42,7 +42,8 @@
 // Default
 
 .button-default-variant(@color) {
-	#gradient .vertical(#fafafa, #eaeaea);
+	#gradient .vertical(@c3, @c4);
+	// #gradient .vertical(#fafafa, #eaeaea);
 	border: 1px solid @input-border-color;
 	border-color: @input-border-color darken(@input-border-color, 6%) darken(@input-border-color, 12%);
 	color: @color;

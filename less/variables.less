@@ -7,29 +7,39 @@
 
 // Colours
 // ------------------------------
+@c1: #bfc3ba;
+@c2: #a9aca9;
+@c3: #60495a;
+@c4: #3f3244;
+@c5: #2f2235;
 
+@o1: #ffbf00;
+@o2: #e83f6f;
+@o3: #2274a5;
+@o4: #32936f;
 
-@react-blue:              #00d8ff;
-@ios-blue:                #007aff;
-@keystone-blue:           #1385e5;
-@elemental-turquoise:     #31adb8;
+@g1: #fbfbf2;
+@g2: #e5e6e4;
+@g3: #cfd2cd;
+@g4: #a6a2a2;
+@g5: #847577;
 
-@brand-primary:           @elemental-turquoise;
-@app-primary:             @keystone-blue;
+@brand-primary:           @c3;
+@app-primary:             lighten(@c3, 20%);
 
-@app-danger:              #d64242;
-@app-info:                #0090e0;
-@app-success:             #34c240;
-@app-warning:             #fa9f47;
+@app-danger:              @o2;
+@app-info:                @o3;
+@app-success:             @o4;
+@app-warning:             @o1;
 
-@gray-base:               #000;
-@gray-darker:             #222;
-@gray-dark:               #333;
-@gray:                    #666;
-@gray-light:              #999;
-@gray-lighter:            #eee;
+@gray-base:               @c2;
+@gray-darker:             @g5;
+@gray-dark:               @g4;
+@gray:                    @g3;
+@gray-light:              @g2;
+@gray-lighter:            @g1;
 
-@body-bg:                 #fdfdfd;
+@body-bg:                 @c4;
 @text-color:              @gray-dark;
 @heading-color:           @gray-darker;
 
@@ -42,12 +52,12 @@
 // Typography
 // ------------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
-@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-sans-serif:  "VT323", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       "VT323", Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   "Hasklig", Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@line-height-base:        1.4;
+@line-height-base:        1.6;
 
 @link-hover-decoration:    underline;
 
@@ -58,7 +68,7 @@
 
 @font-weight-bold:             500;
 
-@code-text-color:              #333;
+@code-text-color:              @gray-light;
 @code-bg-color:                darken(@body-bg, 1%);
 @code-border-color:            darken(@body-bg, 12%);
 
@@ -88,7 +98,7 @@
 // Images
 // ------------------------------
 
-@thumbnail-bg-color:           white;
+@thumbnail-bg-color:           @c4;
 @thumbnail-gutter-width:       4px;
 @thumbnail-bg-hover-color:     @thumbnail-bg-color;
 @thumbnail-border-color:       @input-border-color;
@@ -114,15 +124,15 @@
 
 @form-animation-duration:    280ms;
 
-@form-label-color:            #777;
+@form-label-color:            @gray-dark;
 @form-label-width:            180px;
 @form-help-color:             @form-label-color;
 
-@input-bg-color:              white;
+@input-bg-color:              @c4;
 @input-bg-disabled:           darken(@input-bg-color, 3%);
-@input-placeholder-color:     #aaa;
+@input-placeholder-color:     @gray-darker;
 
-@input-border-color:          #ccc;
+@input-border-color:          @gray-darker;
 @input-border-color-hover:    darken(@input-border-color, 10%);
 @input-border-color-focus:    @app-primary;
 
@@ -185,8 +195,8 @@
 // Dropdowns
 // ------------------------------
 
-@dropdown-bg:                    white;
-@dropdown-divider-bg:            #e5e5e5;
+@dropdown-bg:                    @c5;
+@dropdown-divider-bg:            @brand-primary;
 
 @dropdown-caret-width:           .33em;
 
@@ -194,11 +204,11 @@
 @dropdown-link-hover-color:      mix(@link-color, @text-color, 60%);
 @dropdown-link-hover-bg:         mix(@link-color, @dropdown-bg, 10%);
 
-@dropdown-link-active-color:     white;
+@dropdown-link-active-color:     @gray-light;
 @dropdown-link-active-bg:        @app-primary;
 
 @dropdown-link-disabled-color:   @gray-light;
-@dropdown-header-color:          @gray-light;
+@dropdown-header-color:          @gray;
 @dropdown-menu-height:           360px; // totally arbitrary, just looks right
 
 
@@ -207,8 +217,8 @@
 // Modals
 // ------------------------------
 
-@modal-bg:                    white;
-@modal-backdrop-bg:           rgba(0, 0, 0, 0.5);
+@modal-bg:                    @c4;
+@modal-backdrop-bg:           @c5;
 @modal-padding-vertical:      20px;
 @modal-padding-horizontal:    20px;
 @modal-body-height:           400px;
@@ -225,11 +235,11 @@
 
 @pagination-color:                     @gray;
 
-@pagination-hover-bg:                  white;
-@pagination-hover-border:              rgba(0, 0, 0, 0.1);
+@pagination-hover-bg:                  @brand-primary;
+@pagination-hover-border:              @g5;
 @pagination-hover-color:               @gray;
 
-@pagination-active-bg:                 rgba(0, 0, 0, 0.05);
+@pagination-active-bg:                 @brand-primary;
 @pagination-active-border:             transparent;
 @pagination-active-color:              @gray;
 
@@ -242,7 +252,7 @@
 // Cards
 // ------------------------------
 
-@card-bg-color: white;
+@card-bg-color: @c4;
 
 
 
@@ -263,9 +273,9 @@
 // ------------------------------
 
 @table-padding:                 .66em;
-@table-border-color:            rgba(0,0,0,0.06);
+@table-border-color:            @c5;
 @table-sort-arrow-width:        4px;
-@table-selected-row-bg:         #fffef5;
+@table-selected-row-bg:         @brand-primary;
 @table-selected-row-color:      inherit;
 
 
