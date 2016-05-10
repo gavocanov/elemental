@@ -3,9 +3,10 @@ logs
 *.log
 
 # Build
-dist
+# dist
+site/dist
 .publish
-lib
+# lib
 
 # Dependencies
 node_modules
